@@ -1,28 +1,24 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-export class Home extends Component{
-    render(){
-        return(
-            <div>Home Page</div>
-        )
-    }
-}
+export const Home = () => {
+  return <h2>Home</h2>;
+};
 
-export function About() {
+export const About = () => {
   return <h2>About</h2>;
-}
+};
 
-export function Users() {
+export const Users = () => {
   return <h2>Users</h2>;
-}
+};
 
 const Routes = () => {
   return (
     <Router>
-      <Route exact path="/about" component={<About />} />
-      <Route exact path="/users" component={<Users />} />
-      <Route exact path="/" component={<Home />} />
+      <Route exact path="/about" component={props => <About  />} />
+      <Route exact path="/users" component={props => <Users  />} />
+      <Route exact path="/" component={props => <Home  />} />
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
       <Link to="/users">Users</Link>

@@ -15,7 +15,8 @@ describe("Testing correct navigation in drawer component ", () => {
     const component = shallow(<Routes />);
     pathMap = component.find(Route).reduce((pathMap, route) => {
       const routeProps = route.props();
-      pathMap[routeProps.path] = routeProps.component.type;
+    console.log(routeProps.component().type);
+      pathMap[routeProps.path] = routeProps.component().type;
       return pathMap;
     }, {});
     console.log(pathMap);
