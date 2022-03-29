@@ -22,6 +22,6 @@ describe("Testing correct navigation in drawer component ", () => {
     console.log(pathMap);
   });
   it("should show Home component for path / in Router", () => {
-    expect(pathMap["/"]).toBe(Home);
+    expect(pathMap["/about"]).toBe(About);
   });
 });

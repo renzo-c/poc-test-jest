@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Drawer from './Drawer'
 
 export const Home = () => {
   return <h2>Home</h2>;
@@ -18,10 +19,9 @@ const Routes = () => {
     <Router>
       <Route exact path="/about" component={props => <About  />} />
       <Route exact path="/users" component={props => <Users  />} />
+      <Route exact path="/home" component={props => <Home  />} />
       <Route exact path="/" component={props => <Home  />} />
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/users">Users</Link>
+      <Drawer />
     </Router>
   );
 };
