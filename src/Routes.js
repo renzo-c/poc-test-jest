@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Drawer from './Drawer'
+// import Drawer from './Drawer'
 
 export const Home = () => {
   return <h2>Home</h2>;
@@ -14,14 +14,16 @@ export const Users = () => {
   return <h2>Users</h2>;
 };
 
-const Routes = () => {
+const Routes = ({children}) => {
   return (
     <Router>
       <Route exact path="/about" component={props => <About  />} />
       <Route exact path="/users" component={props => <Users  />} />
       <Route exact path="/home" component={props => <Home  />} />
       <Route exact path="/" component={props => <Home  />} />
-      <Drawer />
+      <div style={{position: 'absolute', left: "50%", top: "50%", display: "flex"}}>
+        {children}
+      </div>
     </Router>
   );
 };
