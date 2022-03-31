@@ -1,4 +1,4 @@
-[
+const fakeUsers = [
   {
     id: 1,
     name: "Leanne Graham",
@@ -230,3 +230,5 @@
     },
   },
 ];
+
+export default fakeUsers;
