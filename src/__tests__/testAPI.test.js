@@ -1,5 +1,5 @@
-import getUsers from "./testAPI";
-import fakeUsers from "./fakeUsers";
+import getUsers from "../utils/testAPI";
+import fakeUsers from "../utils/fakeUsers";
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
@@ -13,7 +13,6 @@ describe("Test 02: Fetches API", () => {
     expect(users).toHaveLength(10);
   });
 });
-
 
 describe("Test 03: Mocks API", () => {
   it("API returns correct fields (Mock)", async () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Routes, { Home, About, Users } from "./Routes";
+import Routes, { Home, About, Users } from "../Routes";
 import { shallow, mount } from "enzyme";
 
 import { configure } from 'enzyme';
