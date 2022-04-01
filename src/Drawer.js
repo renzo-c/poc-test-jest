@@ -13,6 +13,7 @@ import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import InfoIcon from "@mui/icons-material/Info";
+import SettingsIcon from "@mui/icons-material/Settings";
 
 export default function TemporaryDrawer() {
   const [state, setState] = React.useState({
@@ -58,6 +59,12 @@ export default function TemporaryDrawer() {
             <InfoIcon />
           </ListItemIcon>
           <Link to="/about" style={{textDecoration: 'none'}}>About</Link>
+        </ListItem>
+        <ListItem button key={"test"}>
+          <ListItemIcon>
+            <SettingsIcon />
+          </ListItemIcon>
+          <Link to="/about" style={{textDecoration: 'none'}}>Setup</Link>
         </ListItem>
         {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
           <ListItem button key={text}>
