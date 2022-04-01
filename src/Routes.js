@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Items from "./Items"
+
 // import Drawer from './Drawer'
 
 export const Home = () => {
@@ -11,7 +13,8 @@ export const About = () => {
 };
 
 export const Users = () => {
-  return <h2>Users</h2>;
+  const items = ['Shark','Dolphin','Octopus'];
+  return <><h2>Users</h2><Items items={items}></Items></>;
 };
 
 const Routes = ({children}) => {

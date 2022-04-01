@@ -2,6 +2,7 @@ import React from "react";
 import Routes from "./Routes";
 import Drawer from "./Drawer";
 import Dialog from "./Dialog";
+import Items from "./Items";
 
 const App = () => {
   return (
