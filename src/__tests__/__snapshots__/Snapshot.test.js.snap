@@ -8,13 +8,19 @@ exports[`Render items in App correctly 1`] = `
 
 exports[`renders correctly when there are multiple items 1`] = `
 <ul>
-  <li>
+  <li
+    className="this-test"
+  >
     one
   </li>
-  <li>
+  <li
+    className="this-test"
+  >
     two
   </li>
-  <li>
+  <li
+    className="this-test"
+  >
     three
   </li>
 </ul>

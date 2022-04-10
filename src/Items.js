@@ -18,7 +18,7 @@ function Items(props) {
   if (items.length > 1) {
     return (
       <ul>
-        {items.map(item => <li key={item}>{item}</li>)}
+        {items.map(item => <li className="this-test" key={item}>{item}</li>)}
       </ul>
     );
   }
