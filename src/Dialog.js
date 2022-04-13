@@ -8,7 +8,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import Slide from "@mui/material/Slide";
 import Checkbox from "@mui/material/Checkbox";
 import { List, ListItem, Typography } from "@mui/material";
-import getUsers from "./utils/testAPI";
+// import getUsers from "./utils/testAPI";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -18,14 +18,14 @@ export default function AlertDialogSlide() {
   const [open, setOpen] = React.useState(false);
   const [users, setUsers] = React.useState([]);
 
-  React.useEffect(() => {
-    const runThis = async () => {
-      const usersData = await getUsers();
-      setUsers(usersData);
-    };
-    runThis();
-  }, []);
-console.log(users)
+//   React.useEffect(() => {
+//     const runThis = async () => {
+//       const usersData = await getUsers();
+//       setUsers(usersData);
+//     };
+//     runThis();
+//   }, []);
+// console.log(users)
   const handleClickOpen = () => {
     setOpen(true);
   };
